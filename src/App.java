@@ -7,7 +7,8 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         Scanner keyboard = new Scanner(System.in);
-        int opcion; 
+        int opcion;
+        int contador = 1; 
         int fuerza = 0, defensa = 0;
 
         System.out.println("Bienvenido usuario");
@@ -30,7 +31,7 @@ public class App {
                 break;
         }
         System.out.println("Elija su armadura");
-        System.out.println("Arma: \n 1. Ninguna \n 2. De cuero \n 3. De hierro \n 4. De diamante");
+        System.out.println("Armadura: \n 1. Ninguna \n 2. De cuero \n 3. De hierro \n 4. De diamante");
         opcion = keyboard.nextInt();
         switch (opcion) {
             case 1:
@@ -50,16 +51,31 @@ public class App {
 
         Enderman enderito = new Enderman(14);
         
-        while (enderito.getSalud() > 0 || Steve.getSalud() > 0)  {
+        do {
+            System.out.println("Steve ataca");
             Steve.atacar();
-            int randomNumero = (int)(Math.random()* 3 + 1);
+            enderito.recibirAtaque(Steve.getFuerza());
+            if (enderito.getSalud() <= 0) {
+                System.out.println("Enderito ha sido derrotado, el numero de turnos ha sido de " + contador);
+                break;
+            }
+            int randomNumero = (int)(Math.random()* 2 + 1);
+            System.out.println("Ender: ");
             switch (randomNumero) {
                 case 1:
                     enderito.Moverse();
                     break;
                 case 2:
-                    enderito.recibirAtaque(Steve.getFuerza());
+                    System.out.println("ataca");
+                    enderito.atacar();
+                    Steve.recibirAtaque(enderito.getFuerza());
+                    break;
             }
-        }
+            if (Steve.getSalud() <= 0) {
+                System.out.println("Steve ha muerto, el número de turnos ha sido " + contador);
+                break;
+            }
+            contador++;
+        } while (enderito.getSalud() > 0 || Steve.getSalud() > 0);
     }
 }

@@ -17,7 +17,7 @@ public class Personaje implements Combate{
     public void setDefensa(int defensa) { this.defensa = defensa; }
     public void setFuerza(int fuerza) { this.fuerza = fuerza; }
     public int getSalud() { return this.salud; }
-
+    public int getFuerza() { return this.fuerza; }
     @Override
     public int atacar() {
         return this.fuerza;
@@ -26,7 +26,7 @@ public class Personaje implements Combate{
     public void recibirAtaque(int ataque) {
         int danyoRecibido = ataque - this.defensa;
         this.salud = this.salud - danyoRecibido;
-        System.out.println("El daño recibido ha sido de" + danyoRecibido);
+        System.out.println("El daño recibido ha sido de " + danyoRecibido);
         System.out.println("La salud restante es " + this.salud);
     }
 }
