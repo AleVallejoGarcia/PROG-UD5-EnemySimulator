@@ -58,7 +58,7 @@ public class App {
                     enderito.Moverse();
                     break;
                 case 2:
-                    enderito.recibirAtaque(Steve.getAtaque());
+                    enderito.recibirAtaque(Steve.getFuerza());
             }
         }
     }
