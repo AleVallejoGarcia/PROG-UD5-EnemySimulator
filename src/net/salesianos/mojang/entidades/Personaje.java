@@ -1,6 +1,9 @@
 package net.salesianos.mojang.entidades;
 
-public class Personaje {
+import net.salesianos.mojang.interfaces.Combate;
+
+
+public class Personaje implements Combate{
     private int salud;
     private int defensa;
     private int fuerza;
@@ -9,5 +12,17 @@ public class Personaje {
         this.defensa = defensa;
         this.fuerza = fuerza;
         this.salud = 12;
+    }
+
+    @Override
+    public int atacar() {
+        return this.fuerza;
+    }
+
+    public void recibirAtaque(int ataque) {
+        int danyoRecibido = ataque - this.defensa;
+        this.salud = this.salud - danyoRecibido;
+        System.out.println("El daño recibido ha sido de" + danyoRecibido);
+        System.out.println("La salud restante es " + this.salud);
     }
 }
