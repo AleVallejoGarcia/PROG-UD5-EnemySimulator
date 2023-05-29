@@ -10,7 +10,7 @@ public class Enderman extends MobHostil {
     }
 
     public int getSalud() { return this.salud; }
-    public int getFuera() { return this.fuerza; }
+    public int getFuerza() { return this.fuerza; }
 
     @Override
     public void Moverse() {

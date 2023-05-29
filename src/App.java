@@ -50,8 +50,16 @@ public class App {
 
         Enderman enderito = new Enderman(14);
         
-        while (enderito.getSalud() > 0)  {
+        while (enderito.getSalud() > 0 || Steve.getSalud() > 0)  {
             Steve.atacar();
+            int randomNumero = (int)(Math.random()* 3 + 1);
+            switch (randomNumero) {
+                case 1:
+                    enderito.Moverse();
+                    break;
+                case 2:
+                    enderito.recibirAtaque(Steve.getAtaque());
+            }
         }
     }
 }
