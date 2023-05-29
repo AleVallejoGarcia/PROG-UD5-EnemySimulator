@@ -6,8 +6,10 @@ public class Oveja extends MobPacifico {
     public Oveja(int salud) {
         super(salud);
     }
-    public int getFuerza() { return this.fuerza; }
 
+    public int getSalud() { return this.salud; }
+    public int getFuera() { return this.fuerza; }
+    
     @Override
     public void Moverse() {
         System.out.println("Se mueve por el campo");

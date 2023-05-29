@@ -9,6 +9,9 @@ public class Enderman extends MobHostil {
         this.fuerza = 6;
     }
 
+    public int getSalud() { return this.salud; }
+    public int getFuera() { return this.fuerza; }
+
     @Override
     public void Moverse() {
         System.out.println("Se teletransporta detrás");

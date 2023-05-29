@@ -7,6 +7,9 @@ public class Creeper extends MobHostil {
         this.fuerza = 12;
     }
 
+    public int getSalud() { return this.salud; }
+    public int getFuera() { return this.fuerza; }
+
     @Override
     public void Moverse() {
         System.out.println("Te mira ominosamente mientras se acerca hacia ti");

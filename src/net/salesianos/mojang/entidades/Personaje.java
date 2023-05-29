@@ -14,6 +14,9 @@ public class Personaje implements Combate{
         this.salud = 12;
     }
 
+    public void setDefensa(int defensa) { this.defensa = defensa; }
+    public void setFuerza(int fuerza) { this.fuerza = fuerza; }
+
     @Override
     public int atacar() {
         return this.fuerza;
