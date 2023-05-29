@@ -1,7 +1,7 @@
 package net.salesianos.mojang.entidades;
 import net.salesianos.mojang.interfaces.Combate;
 
-public class MobHostil extends Mob implements Combate {
+public abstract class MobHostil extends Mob implements Combate {
     protected int fuerza;
 
     public MobHostil(int salud) {
@@ -18,7 +18,4 @@ public class MobHostil extends Mob implements Combate {
         System.out.println("El daño recibido ha sido de " + ataque);
         System.out.println("La salud restante es " + this.salud);
     }
-
-    public void Moverse() {}
-
 }
