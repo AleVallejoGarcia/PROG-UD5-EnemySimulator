@@ -1,18 +1,30 @@
-## Getting Started
+# Minecraft Retro
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+![logo de mojang](./images/Mojang-logo.png)
 
-## Folder Structure
+## Manual de usuario
 
-The workspace contains two folders by default, where:
+Si desea acceder a un manual para el uso de el juego  pulse [aquí](./docs/MANUALDEUSUARIO.md)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Descripción de las clases
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Si quiere acceder a una descripción de las clases del proyecto pulse [aquí](docs/DESCRIPCIONDECLASES.md)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
+## Estructura de paquetes
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+La estructura de paquetes es la siguiente
+
+- `src`: Dentro tiene todos las clases del proyecto.
+- `net`: Dominio .
+- `salesianos`: Organización
+- `mojang`: Organización que nos contrata.
+- `entidades`: Paquete que contiene las clases abstractas Mob, MobHostil y MobPacifico además de la clase Personaje.
+- `mobs`: Contiene 3 clases de mobs creados a partir de las clases abstractas MobHostil y MobPacifico.
+- `interfaces`: Este paquete contiene las interfaces usadas en los combates entre Mobs y el personaje
+- `docs`: Contiene el manual de usuario y la descripción de las clases.
+- `images`: Contiene las imágenes usadas en los documentos.
+
+![logo salesianos la cuesta](./images/salesianoslacuesta.png)
+
+
